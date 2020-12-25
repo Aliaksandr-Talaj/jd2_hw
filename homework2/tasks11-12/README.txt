@@ -1,4 +1,4 @@
-Делаю копию проекта
+п»їР”РµР»Р°СЋ РєРѕРїРёСЋ РїСЂРѕРµРєС‚Р°
 $ git status
 On branch master
 Untracked files:
@@ -7,7 +7,7 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-Выставляю созданные файлы на stage:
+Р’С‹СЃС‚Р°РІР»СЏСЋ СЃРѕР·РґР°РЅРЅС‹Рµ С„Р°Р№Р»С‹ РЅР° stage:
 
 $ git add .
 warning: LF will be replaced by CRLF in task11/projectCopy/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst.
@@ -34,7 +34,7 @@ Changes to be committed:
         new file:   projectCopy/task8.iml
 
 
-Делаю commit в бранч master:
+Р”РµР»Р°СЋ commit РІ Р±СЂР°РЅС‡ master:
 		
 $ git commit -m "Made a copy of project"
 [master 8ca7af7] Made a copy of project
@@ -66,7 +66,7 @@ Date:   Fri Dec 25 06:05:42 2020 +0300
 
     Added homework2, tasks 8-9
 
-Изменяю pom-файл, проверяю статус:
+РР·РјРµРЅСЏСЋ pom-С„Р°Р№Р», РїСЂРѕРІРµСЂСЏСЋ СЃС‚Р°С‚СѓСЃ:
 $ git status
 On branch little
 Changes not staged for commit:
@@ -76,20 +76,20 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-Фиксирую изменения в ветке little:
+Р¤РёРєСЃРёСЂСѓСЋ РёР·РјРµРЅРµРЅРёСЏ РІ РІРµС‚РєРµ little:
 $ git add  projectCopy/pom.xml
 $ git commit -m "Modified pom.xml"
 [little 64075a7] Modified pom.xml
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 
-Перехожу на ветку master, изменяю файлы pom.xml и web.xml,
+РџРµСЂРµС…РѕР¶Сѓ РЅР° РІРµС‚РєСѓ master, РёР·РјРµРЅСЏСЋ С„Р°Р№Р»С‹ pom.xml Рё web.xml,
 $ git checkout master
 Switched to branch 'master'
 
-При этом в файле, после перехода, нет видно изменений,
-зафиксированных в другой ветке.
-Смотрю статус после изменения файлов:
+РџСЂРё СЌС‚РѕРј РІ С„Р°Р№Р»Рµ, РїРѕСЃР»Рµ РїРµСЂРµС…РѕРґР°, РЅРµС‚ РІРёРґРЅРѕ РёР·РјРµРЅРµРЅРёР№,
+Р·Р°С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹С… РІ РґСЂСѓРіРѕР№ РІРµС‚РєРµ.
+РЎРјРѕС‚СЂСЋ СЃС‚Р°С‚СѓСЃ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ С„Р°Р№Р»РѕРІ:
 $ git status
 On branch master
 Changes not staged for commit:
@@ -100,13 +100,13 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-Фиксирую изменения:
+Р¤РёРєСЃРёСЂСѓСЋ РёР·РјРµРЅРµРЅРёСЏ:
 $ git add .
 $ git commit -m "Modified pom.xml and web.xml"
 [master ebc9686] Modified pom.xml and web.xml
  2 files changed, 3 insertions(+), 2 deletions(-)
 
- Смотрю лог:
+ РЎРјРѕС‚СЂСЋ Р»РѕРі:
  
 $ git log
 commit ebc968681ad2291aec69d28d610dfed64ede1735 (HEAD -> master)
@@ -127,7 +127,7 @@ Date:   Fri Dec 25 06:05:42 2020 +0300
 
     Added homework2, tasks 8-9
 
-Смотрю лог соседней ветки:
+РЎРјРѕС‚СЂСЋ Р»РѕРі СЃРѕСЃРµРґРЅРµР№ РІРµС‚РєРё:
 $ git checkout little
 Switched to branch 'little'
 $ git log
@@ -149,7 +149,7 @@ Date:   Fri Dec 25 06:05:42 2020 +0300
 
     Added homework2, tasks 8-9
 
-Перехожу на ветку master  и начинаю слияние:
+РџРµСЂРµС…РѕР¶Сѓ РЅР° РІРµС‚РєСѓ master  Рё РЅР°С‡РёРЅР°СЋ СЃР»РёСЏРЅРёРµ:
 $ git checkout master
 Switched to branch 'master'
 $ git merge little
@@ -157,7 +157,7 @@ Auto-merging task11/projectCopy/pom.xml
 CONFLICT (content): Merge conflict in task11/projectCopy/pom.xml
 Automatic merge failed; fix conflicts and then commit the result.
 
-Редактирую файл, в котором присутствует следующий фрагмент:
+Р РµРґР°РєС‚РёСЂСѓСЋ С„Р°Р№Р», РІ РєРѕС‚РѕСЂРѕРј РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ СЃР»РµРґСѓСЋС‰РёР№ С„СЂР°РіРјРµРЅС‚:
 	
 
 <<<<<<< HEAD
@@ -168,12 +168,12 @@ Automatic merge failed; fix conflicts and then commit the result.
         <maven.compiler.target>1.8</maven.compiler.target>
 >>>>>>> little
 
-Вношу необходимые изменения и фиксирую:
+Р’РЅРѕС€Сѓ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РёР·РјРµРЅРµРЅРёСЏ Рё С„РёРєСЃРёСЂСѓСЋ:
 $ git add projectCopy/pom.xml
 $ git commit -m "Merged branches"
 [master bfe3636] Merged branches
 
-Проверяю лог:
+РџСЂРѕРІРµСЂСЏСЋ Р»РѕРі:
 $ git log
 commit bfe36362f9b3786416ab514db6e9a3ea3337e138 (HEAD -> master)
 Merge: ebc9686 64075a7

@@ -1,4 +1,4 @@
-Для переустановки приложения выполняю
+п»їР”Р»СЏ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєРё РїСЂРёР»РѕР¶РµРЅРёСЏ РІС‹РїРѕР»РЅСЏСЋ
 $ mvn tomcat:redeploy
 [INFO] Scanning for projects...
 [INFO]
@@ -57,7 +57,7 @@ WARNING: All illegal access operations will be denied in a future release
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
 
-Добавляю плагин в pom.xml:
+Р”РѕР±Р°РІР»СЏСЋ РїР»Р°РіРёРЅ РІ pom.xml:
 
 <plugin>
     <groupId>org.codehaus.mojo</groupId>
@@ -70,7 +70,7 @@ WARNING: All illegal access operations will be denied in a future release
     </configuration>
  </plugin>
  
- Повторяю попытку переустановки:
+ РџРѕРІС‚РѕСЂСЏСЋ РїРѕРїС‹С‚РєСѓ РїРµСЂРµСѓСЃС‚Р°РЅРѕРІРєРё:
  $ mvn tomcat:redeploy
 [INFO] Scanning for projects...
 [INFO]
@@ -123,7 +123,7 @@ WARNING: All illegal access operations will be denied in a future release
 [INFO] Finished at: 2020-12-25T04:56:59+03:00
 [INFO] ------------------------------------------------------------------------
 
-Информация о сервере:
+РРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃРµСЂРІРµСЂРµ:
 $ mvn tomcat:sessions
 [INFO] Scanning for projects...
 [INFO]
