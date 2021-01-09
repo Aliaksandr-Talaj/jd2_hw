@@ -28,7 +28,6 @@ public class CounterServlet extends HttpServlet {
         }                           //счетчик counter обнулится, но сервлет сохранит работоспособность
 
 
-
         try (DataInputStream dataInputStream = new DataInputStream(new FileInputStream(dir + "/doGetCounter"))) {
             counter = dataInputStream.readInt();
 
@@ -37,7 +36,8 @@ public class CounterServlet extends HttpServlet {
         }
         counter++;
 
-        try (DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(dir + "/doGetCounter"))) {
+        try (DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream(
+                dir + "/doGetCounter"))) {
             dataOutputStream.writeInt(counter);
         } catch (IOException e) {
             e.printStackTrace();

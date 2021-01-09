@@ -19,9 +19,9 @@ public class DaoFactory {
 
     public AccountingDao getAccountingDao(String url, String user, String password)throws SQLException {
         Connection  connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/expenses_accounting?serverTimezone=UTC",
-                "root",
-                "root");
+                url,
+                user,
+                password);
         return new AccountingDaoImpl(connection);
     }
 

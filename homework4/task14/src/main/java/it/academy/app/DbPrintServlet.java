@@ -34,17 +34,15 @@ public class DbPrintServlet extends HttpServlet {
 
         DaoFactory daoFactory = new DaoFactory();
         AccountingDao accountingDao = null;
+        PrintWriter out = resp.getWriter();
 
         try {
             accountingDao = daoFactory.getAccountingDao(dbUrl, user, password);
         } catch (SQLException e) {
-            System.out.println("Connection failure");
-            e.printStackTrace();
+           out.println("Database connection failure");
         }
 
-        PrintWriter out = resp.getWriter();
-
-        accountingDao.printAll(out);
+            accountingDao.printAll(out);
 
     }
 }
