@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="1" author="root">
+        <sql>
+            CREATE DATABASE IF NOT EXISTS expenses_accounting DEFAULT CHARACTER SET utf8;
+            USE expenses_accounting;
+        </sql>
+    </changeSet>
+
+    <changeSet id="2" author="root">
+        <sql>
+            CREATE TABLE IF NOT EXISTS expenses_accounting.contractors (
+            id INT PRIMARY KEY,
+            entity_name VARCHAR(250) NOT NULL
+            );
+
+        </sql>
+    </changeSet>
+    <changeSet id="3" author="root">
+        <sql>
+            CREATE TABLE IF NOT EXISTS expenses_accounting.expenses (
+            payment_number INT PRIMARY KEY,
+            payment_date DATE NOT NULL,
+            recipient_id INT NOT NULL,
+            CONSTRAINT recipient_id FOREIGN KEY (recipient_id)
+            REFERENCES expenses_accounting.contractors (id),
+            amount DECIMAL NOT NULL
+            );
+        </sql>
+    </changeSet>
+
+    <changeSet id="4" author="root">
+        <sql>
+            ALTER SCHEMA `expenses_accounting`  DEFAULT CHARACTER SET utf8 ;
+            INSERT INTO expenses_accounting.contractors VALUES (1, 'Internet-provider "Solo"');
+            INSERT INTO expenses_accounting.contractors VALUES (2, 'Hypermarket "Korona"');
+            INSERT INTO expenses_accounting.contractors VALUES (3, 'MTS');
+
+            INSERT INTO expenses_accounting.expenses VALUES (1, '2011.5.10', 1, 20000);
+            INSERT INTO expenses_accounting.expenses VALUES (2, '2011.5.10', 2, 94200);
+            INSERT INTO expenses_accounting.expenses VALUES (3, '2011.5.11', 3, 10000);
+            INSERT INTO expenses_accounting.expenses VALUES (4, '2011.5.11', 2, 12950);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
