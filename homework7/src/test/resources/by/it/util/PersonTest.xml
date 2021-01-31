@@ -1,0 +1,15 @@
+<dataset>
+
+    <T_SHOP_USER ID_COL="1"
+                 NAME_COL="Vasil"
+                 SURNAME_COL="Pupkinidze"/>
+
+    <T_SHOP_USER ID_COL="2"
+                 NAME_COL="Johny"
+                 SURNAME_COL="Cage"/>
+
+    <T_SHOP_USER ID_COL="3"
+                 NAME_COL="Sam"
+                 SURNAME_COL="Susam"/>
+
+</dataset>
