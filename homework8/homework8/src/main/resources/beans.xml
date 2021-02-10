@@ -1,0 +1,29 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<c:annotation-config/>
+    <c:component-scan base-package="it.academy">
+    <c:include-filter type="annotation"
+                      expression="org.springframework.stereotype.Component"/>
+
+<!--    <c:exclude-filter type="assignable"-->
+<!--                      expression="it.academy.pojos.Main"/>-->
+
+    </c:component-scan>
+<!--    <bean id="user" class="it.academy.pojos.RegularUser">-->
+<!--        <property name="name" value="Senya"/>-->
+
+<!--    </bean>-->
+<!--    <bean id="activeProfile" class="it.academy.pojos.ActiveProfile">-->
+<!--        <constructor-arg ref="user"/>-->
+
+
+
+
+
+
+</beans>
