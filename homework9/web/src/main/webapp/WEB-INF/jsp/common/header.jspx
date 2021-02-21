@@ -1,0 +1,8 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/web">First page</a>
+            <br/>
+        </div>
+    </nav>
+</div>
